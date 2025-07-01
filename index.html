@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="./images/ObeidHospitalLogo.png" alt="Obeid Hospital Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#departments">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <section class="hero-section d-flex align-items-center" id="home">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 text-white" data-aos="fade-right">
+                        <h1 class="typewriter-text">
+                            <span id="typed-text"></span><span class="cursor">|</span>
+                        </h1>
+                        <p class="lead mb-4">Trusted healthcare for over 25 years.</p>
+                        <div class="d-flex">
+                            <a href="appointment.html" class="btn btn-primary btn-lg px-4 custom-hover">Book an
+                                Appointment</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center" data-aos="fade-left">
+                        <img src="./images/hero_image.png" alt="Our Doctors" class="img-fluid doctor-hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="py-5 bg-light">
+            <div class="container px-4">
+                <!---<h2 class="text-center mb-5 text-primary fw-bold" data-aos="fade-down">Our Services</h2>--->
+
+                <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center g-2">
+                                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card service-card text-white bg-primary text-center p-4 shadow h-100">
+                                        <i class="fas fa-heartbeat fa-2x mb-3"></i>
+                                        <h5>Surgery Services</h5>
+                                        <p>Safe and advanced surgical procedures by expert surgeons.</p>
+                                        <a href="#" class="btn btn-light btn-sm mt-auto">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="card service-card text-white bg-primary text-center p-4 shadow h-100">
+                                        <i class="fas fa-hospital-user fa-2x mb-3"></i>
+                                        <h5>Outpatient & Inpatient</h5>
+                                        <p>Comfortable rooms and efficient consultations.</p>
+                                        <a href="#" class="btn btn-light btn-sm mt-auto">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="card service-card text-white bg-primary text-center p-4 shadow h-100">
+                                        <i class="fas fa-vials fa-2x mb-3"></i>
+                                        <h5>Laboratory Services</h5>
+                                        <p>Accurate diagnostic testing with timely results.</p>
+                                        <a href="#" class="btn btn-light btn-sm mt-auto">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center g-2">
+                                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card service-card text-white bg-primary text-center p-4 shadow h-100">
+                                        <i class="fas fa-pills fa-2x mb-3"></i>
+                                        <h5>Pharmacy Services</h5>
+                                        <p>Reliable in-house pharmacy for medications.</p>
+                                        <a href="#" class="btn btn-light btn-sm mt-auto">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="card service-card text-white bg-primary text-center p-4 shadow h-100">
+                                        <i class="fas fa-x-ray fa-2x mb-3"></i>
+                                        <h5>Radiology Services</h5>
+                                        <p>Modern imaging for accurate diagnosis.</p>
+                                        <a href="#" class="btn btn-light btn-sm mt-auto">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="card service-card text-white bg-primary text-center p-4 shadow h-100">
+                                        <i class="fas fa-ambulance fa-2x mb-3"></i>
+                                        <h5>Emergency Services</h5>
+                                        <p>24/7 emergency response and trauma care.</p>
+                                        <a href="#" class="btn btn-light btn-sm mt-auto">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center g-2">
+                                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card service-card text-white bg-primary text-center p-4 shadow h-100">
+                                        <i class="fas fa-dumbbell fa-2x mb-3"></i>
+                                        <h5>Physiotherapy</h5>
+                                        <p>Therapy and rehabilitation for recovery.</p>
+                                        <a href="#" class="btn btn-light btn-sm mt-auto">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="card service-card text-white bg-primary text-center p-4 shadow h-100">
+                                        <i class="fas fa-home fa-2x mb-3"></i>
+                                        <h5>Home Care</h5>
+                                        <p>Medical care at the comfort of your home.</p>
+                                        <a href="#" class="btn btn-light btn-sm mt-auto">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="card service-card text-white bg-primary text-center p-4 shadow h-100">
+                                        <i class="fas fa-file-medical fa-2x mb-3"></i>
+                                        <h5>Medical Insurance</h5>
+                                        <p>Support for most major health insurances.</p>
+                                        <a href="#" class="btn btn-light btn-sm mt-auto">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="doctors" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-down">Meet Our Doctors</h2>
+            <div class="doctor-slider overflow-hidden" data-aos="fade-up">
+                <div class="doctor-track d-flex" id="doctorTrack">
+                    <div class="doctor-card">
+                        <img src="./images/arabian_doctor_1.jpg" alt="Dr. John Doe">
+                        <h5>Dr. John Doe</h5>
+                        <p>Cardiologist</p>
+                        <a href="appointment.html?doctor=Dr.%20John%20Doe%20(Cardiologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/women_doctor_1.jpg" alt="Dr. Jane Smith">
+                        <h5>Dr. Jane Smith</h5>
+                        <p>Neurologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Jane%20Smith%20(Neurologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/arabian_doctor_2.jpg" alt="Dr. Michael Lee">
+                        <h5>Dr. Michael Lee</h5>
+                        <p>Pediatrician</p>
+                        <a href="appointment.html?doctor=Dr.%20Michael%20Lee%20(Pediatrician)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/women_doctor_2.jpg" alt="Dr. Emily Brown">
+                        <h5>Dr. Emily Brown</h5>
+                        <p>Dermatologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Emily%20Brown%20(Dermatologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/arabian_doctor_3.jpg" alt="Dr. Chris Green">
+                        <h5>Dr. Chris Green</h5>
+                        <p>Oncologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Chris%20Green%20(Oncologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/women_doctor_3.jpg" alt="Dr. Sarah White">
+                        <h5>Dr. Sarah White</h5>
+                        <p>Gynecologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Sarah%20White%20(Gynecologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/arabian_doctor_4.jpg" alt="Dr. Harry Parker">
+                        <h5>Dr. Harry Parker</h5>
+                        <p>Opthalmologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Harry%20Parker%20(Opthalmologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/arabian_doctor_5.jpg" alt="Dr. Ronald Black">
+                        <h5>Dr. Ronald Black</h5>
+                        <p>Orthopedists</p>
+                        <a href="appointment.html?doctor=Dr.%20Ronald%20Black%20(Orthopedists)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/women_doctor_4.jpg" alt="Dr. Molly Granger">
+                        <h5>Dr. Molly Granger</h5>
+                        <p>Otolaryngologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Molly%20Granger%20(Otolaryngologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/women_doctor_5.jpg" alt="Dr. Hermione Weasley">
+                        <h5>Dr. Hermione Weasley</h5>
+                        <p>Dentist</p>
+                        <a href="appointment.html?doctor=Dr.%20Hermione%20Weasley%20(Dentist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/women_doctor_6.jpg" alt="Dr. Ginny Adams">
+                        <h5>Dr. Ginny Adams</h5>
+                        <p>Dermatologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Ginny%20Adams%20(Dermatologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/arabian_doctor_6.jpg" alt="Dr. Remus Potter">
+                        <h5>Dr. Remus Potter</h5>
+                        <p>Oncologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Remus%20Potter%20(Oncologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/women_doctor_7.jpg" alt="Dr. Minerva Sullivan">
+                        <h5>Dr. Minerva Sullivan</h5>
+                        <p>Gynecologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Minerva%20Sullivan%20(Gynecologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/women_doctor_8.jpg" alt="Dr. Luna Brown">
+                        <h5>Dr. Luna Brown</h5>
+                        <p>Gynecologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Luna%20Brown%20(Gynecologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/arabian_doctor_7.jpg" alt="Dr. Patrick Williams">
+                        <h5>Dr. Patrick Williams</h5>
+                        <p>Cardiologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Patrick%20Williams%20(Cardiologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/arabian_doctor_8.jpg" alt="Dr. Clint Russell">
+                        <h5>Dr. Clint Russell</h5>
+                        <p>Neurologist</p>
+                        <a href="appointment.html?doctor=Dr.%20Clint%20Russell%20(Neurologist)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="./images/arabian_doctor_9.jpg" alt="Dr. Oliver Johnson">
+                        <h5>Dr. Oliver Johnson</h5>
+                        <p>Pediatrician</p>
+                        <a href="appointment.html?doctor=Dr.%20Oliver%20Johnson%20(Pediatrician)"
+                            class="btn btn-sm btn-primary mt-2">Book an Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="departments" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-right">Departments</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card cardiology">
+                        <h5>Cardiology</h5>
+                        <p>Advanced care for heart-related conditions.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal"
+                            data-bs-target="#doctorsModal" data-department="Cardiology">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card internal-medicine">
+                        <h5>Internal Medicine</h5>
+                        <p>Includes a number of doctors specialized in various general and sub-departments in the
+                            field
+                            of internal medicine, Whether in outpatient clinics or inpatients.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal"
+                            data-bs-target="#doctorsModal" data-department="Internal Medicine">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card orthopedics">
+                        <h5>Orthopedics</h5>
+                        <p>Bone, joint, and spine care and surgery.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal"
+                            data-bs-target="#doctorsModal" data-department="Orthopedics">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card pediatrics">
+                        <h5>Pediatrics</h5>
+                        <p>Comprehensive care for infants, children, and adolescents.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal"
+                            data-bs-target="#doctorsModal" data-department="Pediatrics">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+                <a href="departments.html" class="btn btn-primary btn-lg px-4">View More Departments</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h2 class="mb-3">About Obeid Specialized Hospital</h2>
+                    <p class="lead">
+                        Obeid Specialized Hospital has been serving the community with compassion, excellence, and
+                        innovation for over 25 years.
+                    </p>
+                    <p>
+                        We are a multi-specialty hospital committed to providing high-quality, patient-centered
+                        healthcare. Our mission is to improve lives through exceptional care, advanced technology,
+                        and a dedicated team of professionals.
+                    </p>
+                    <ul class="list-unstyled mb-4">
+                        <li>🏥 Over 150 beds and 20+ departments</li>
+                        <li>👨‍⚕️ Certified and experienced medical professionals</li>
+                        <li>🕒 24/7 Emergency and Outpatient Services</li>
+                        <li>📈 ISO 9001 Certified for quality standards</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-primary px-4 learn-more-btn">Learn More</a>
+                </div>
+
+                <div class="col-md-6 text-center" data-aos="fade-left">
+                    <img src="./images/Obeid_hospital.jpg" alt="Hospital Building" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="find-us" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Find Us</h2>
+            <div class="row align-items-stretch">
+
+                <!-- Left Column -->
+                <div class="col-md-6 d-flex flex-column justify-content-between" data-aos="fade-right">
+                    <div class="bg-white p-4 shadow rounded mb-4 h-100">
+                        <h4 class="mb-3"><i class="fas fa-hospital-alt me-2 text-primary"></i> Obeid Specialized
+                            Hospital</h4>
+                        <p><i class="fas fa-map-marker-alt me-2 text-danger"></i> Prince Abdulrahman Bin Abdulaziz
+                            St,
+                            Al Wahah, Riyadh 12443, Saudi Arabia</p>
+                        <p><i class="fas fa-phone me-2 text-success"></i> <a href="tel:+966114645511">+966 11 464
+                                5511</a></p>
+                        <p><i class="fas fa-envelope me-2 text-primary"></i> <a
+                                href="mailto:contact@obeidhospital.com">contact@obeidhospital.com</a></p>
+                        <a href="https://www.google.com/maps?q=Obeid+Specialized+Hospital,+Riyadh,+Saudi+Arabia"
+                            target="_blank" class="btn btn-outline-primary mt-3">
+                            <i class="fas fa-directions me-1"></i> Get Directions
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-4 shadow rounded mt-3" data-aos="fade-up">
+                        <h5><i class="fas fa-paper-plane me-2 text-info"></i> Send Us a Message</h5>
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button type="submit" class="btn btn-primary px-4">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Column: Map -->
+                <div class="col-md-6 mt-4 mt-md-0" data-aos="fade-left">
+                    <div class="h-100 rounded shadow overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.1239022391996!2d46.713237815002924!3d24.701030384122607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f035939bcccaf%3A0xc72a7f7248e1f73f!2sObeid%20Specialized%20Hospital!5e0!3m2!1sen!2ssa!4v1689159989521!5m2!1sen!2ssa"
+                            width="100%" height="100%" style="border:0; min-height: 500px;" allowfullscreen
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-primary text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Obeid Specialized Hospital</h5>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i>Al Farazdaq St, Road, Riyadh 12627, Saudi Arabia</p>
+                    <p><i class="bi bi-telephone-fill me-2"></i>+966 11 476 7222</p>
+                    <p><i class="bi bi-clock-fill me-2"></i>Open 24 hours</p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#services" class="text-white text-decoration-none"><i
+                                    class="bi bi-chevron-right me-1"></i> Services</a></li>
+                        <li><a href="#departments" class="text-white text-decoration-none"><i
+                                    class="bi bi-chevron-right me-1"></i> Departments</a></li>
+                        <li><a href="#about" class="text-white text-decoration-none"><i
+                                    class="bi bi-chevron-right me-1"></i> About Us</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none"><i
+                                    class="bi bi-chevron-right me-1"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Subscribe to Our Newsletter</h5>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email" required>
+                            <button class="btn btn-light text-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div>
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-white opacity-25">
+
+            <div class="row text-center">
+                <div class="col-md-6 text-md-start">
+                    <p class="mb-0">&copy; 2025 Obeid Specialized Hospital. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <div class="modal fade" id="doctorsModal" tabindex="-1" aria-labelledby="doctorsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="doctorsModalLabel">Doctors</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="doctorsList" class="list-group">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        const departmentDoctors = {
+            "Cardiology": ["Dr. John Heartwell", "Dr. Amanda Vein"],
+            "Internal Medicine": ["Dr. Clara Holmes", "Dr. Edward Stone"],
+            "Orthopedics": ["Dr. Felix Bone", "Dr. Marta Joint"],
+            "Pediatrics": ["Dr. Lily Childs", "Dr. Omar Growth"],
+            "Surgery Department": ["Dr. Aidan Sharp", "Dr. Zoe Blade"],
+            "Oncology": ["Dr. Natalie Cell", "Dr. Hugo Ray"],
+            "Radiology": ["Dr. Radi Scan", "Dr. Ella Image"],
+            "Ophthalmology": ["Dr. Iris Clear", "Dr. Leo Vision"],
+            "Dental": ["Dr. Pearl White", "Dr. Molly Crown"]
+        };
+
+        document.querySelectorAll(".view-doctors-btn").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const department = this.getAttribute("data-department");
+                const modalTitle = document.getElementById("doctorsModalLabel");
+                const doctorsList = document.getElementById("doctorsList");
+
+                modalTitle.textContent = department + " - Doctors List";
+                doctorsList.innerHTML = "";
+
+                const doctors = departmentDoctors[department] || ["No doctors listed."];
+
+                doctors.forEach(doc => {
+                    const li = document.createElement("li");
+                    li.className = "list-group-item";
+                    li.textContent = doc;
+                    doctorsList.appendChild(li);
+                });
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

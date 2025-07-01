@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obeid Hospital Departments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/ObeidHospitalLogo.png" alt="Obeid Hospital Logo" height="50" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicesScroll">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-down">All Hospital Departments</h2>
+            <div class="row">
+                <!-- Example department card with modal trigger -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card cardiology">
+                        <h5>Cardiology</h5>
+                        <p>Advanced care for heart-related conditions.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal" data-bs-target="#doctorsModal" data-department="Cardiology">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card internal-medicine">
+                        <h5>Internal Medicine</h5>
+                        <p>Includes a number of doctors specialized in various general and sub-departments in the field
+                            of internal medicine, Whether in outpatient clinics or inpatients.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal" data-bs-target="#doctorsModal" data-department="Internal Medicine">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card orthopedics">
+                        <h5>Orthopedics</h5>
+                        <p>Bone, joint, and spine care and surgery.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal" data-bs-target="#doctorsModal" data-department="Orthopedics">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card pediatrics">
+                        <h5>Pediatrics</h5>
+                        <p>Comprehensive care for infants, children, and adolescents.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal" data-bs-target="#doctorsModal" data-department="Pediatrics">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card surgery">
+                        <h5>Surgery Department</h5>
+                        <p>It includes general surgery clinics in addition to specialized surgery, such as plastic
+                            surgery, urology, and brain, nerve and spine clinics.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal" data-bs-target="#doctorsModal" data-department="Surgery Department">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card oncology">
+                        <h5>Oncology</h5>
+                        <p>Cancer treatment, including chemotherapy and surgery.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal" data-bs-target="#doctorsModal" data-department="Oncology">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card radiology">
+                        <h5>Radiology</h5>
+                        <p>Medical imaging services, including X-rays, MRIs, and CT scans.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal" data-bs-target="#doctorsModal" data-department="Radiology">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card ophthalmology">
+                        <h5>Ophthalmology</h5>
+                        <p>Eyelid surgery Tear duct obstruction Lens implant Excess adenoid operations.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal" data-bs-target="#doctorsModal" data-department="Ophthalmology">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white shadow-sm rounded h-100 department-card dental">
+                        <h5>Dental</h5>
+                        <p>General and cosmetic dentistry services.</p>
+                        <button class="btn btn-primary mt-3 view-doctors-btn" data-bs-toggle="modal" data-bs-target="#doctorsModal" data-department="Dental">
+                            View Doctors List
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for viewing doctors -->
+    <div class="modal fade" id="doctorsModal" tabindex="-1" aria-labelledby="doctorsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="doctorsModalLabel">Doctors</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul id="doctorsList" class="list-group">
+              <!-- Populated via JS -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center text-white bg-primary py-3">
+        <p class="mb-0">© 2025 Obeid Hospital. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        const departmentDoctors = {
+          "Cardiology": ["Dr. John Heartwell", "Dr. Amanda Vein"],
+          "Internal Medicine": ["Dr. Clara Holmes", "Dr. Edward Stone"],
+          "Orthopedics": ["Dr. Felix Bone", "Dr. Marta Joint"],
+          "Pediatrics": ["Dr. Lily Childs", "Dr. Omar Growth"],
+          "Surgery Department": ["Dr. Aidan Sharp", "Dr. Zoe Blade"],
+          "Oncology": ["Dr. Natalie Cell", "Dr. Hugo Ray"],
+          "Radiology": ["Dr. Radi Scan", "Dr. Ella Image"],
+          "Ophthalmology": ["Dr. Iris Clear", "Dr. Leo Vision"],
+          "Dental": ["Dr. Pearl White", "Dr. Molly Crown"]
+        };
+
+        document.querySelectorAll(".view-doctors-btn").forEach(btn => {
+          btn.addEventListener("click", function () {
+            const department = this.getAttribute("data-department");
+            const modalTitle = document.getElementById("doctorsModalLabel");
+            const doctorsList = document.getElementById("doctorsList");
+
+            modalTitle.textContent = department + " - Doctors List";
+            doctorsList.innerHTML = "";
+
+            const doctors = departmentDoctors[department] || ["No doctors listed."];
+
+            doctors.forEach(doc => {
+              const li = document.createElement("li");
+              li.className = "list-group-item";
+              li.textContent = doc;
+              doctorsList.appendChild(li);
+            });
+          });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
