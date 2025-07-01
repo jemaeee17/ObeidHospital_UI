@@ -192,6 +192,7 @@
      padding-top: 6rem;
      padding-bottom: 2rem;
      text-align: center;
+     margin-top: -4rem;
    }
 
    .typewriter-text {
@@ -202,7 +203,7 @@
 
    .hero-section img {
      max-width: 90%;
-     margin-top: 1rem;
+     margin-top: -15rem;
      height: auto;
    }
 
@@ -219,6 +220,10 @@
      width: 220px;
    }
 
+   .about-img {
+     margin-top: 1rem;
+   }
+
    .footer .row>div {
      text-align: center;
    }
@@ -231,24 +236,51 @@
      justify-content: center;
    }
 
-   .footer .input-group {
+   .input-group {
      flex-direction: column;
-     align-items: stretch;
+     gap: 0.5rem;
+     width: 100% !important;
    }
 
-   .footer .input-group input {
-     margin-bottom: 0.5rem;
+   .input-group .form-control,
+   .input-group .btn {
+     width: 100% !important;
+     display: block;
+
    }
 
-   .footer .input-group input,
-   .footer .input-group button {
+   .input-group input,
+   .input-group button {
      width: 100%;
+     font-size: 1rem;
+     padding: 0.5rem 1rem;
+
    }
 
-   .footer .input-group input {
-     margin-bottom: 0.5rem;
+   .input-group button {
+     white-space: nowrap;
    }
  }
+
+ @media (max-width: 576px) {
+   .appointment-form-container {
+     padding: 1rem;
+     margin: 1rem 0;
+   }
+
+   .appointment-form .form-control,
+   .appointment-form .form-select {
+     font-size: 1rem;
+     padding: 0.6rem 1rem;
+   }
+
+   .appointment-form button,
+   .appointment-form a {
+     font-size: 1rem;
+     padding: 0.6rem 1rem;
+   }
+ }
+
 
  /* @media (max-width: 768px) {
    .typewriter-text {
